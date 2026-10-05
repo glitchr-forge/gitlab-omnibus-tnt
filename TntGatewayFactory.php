@@ -3,7 +3,6 @@
 namespace Omnibus\Tnt;
 
 use Omnibus\Config;
-use Omnibus\Exception\InvalidConfigException;
 use Omnibus\GatewayFactory;
 use Omnibus\Tnt\Action\RatingAction;
 use Omnibus\Tnt\Action\ShippingAction;
@@ -30,7 +29,7 @@ final class TntGatewayFactory extends GatewayFactory
             'omnibus.factory_title' => 'TNT',
             'omnibus.required_options' => ['username', 'password', 'account_number'],
             'omnibus.api' => function (Config $c) {
-                $http = $this->http ?? (class_exists(HttpClient::class) ? HttpClient::create() : throw new InvalidConfigException('The "tnt" gateway needs symfony/http-client.'));
+                $http = $this->http ?? HttpClient::create();
 
                 return new Api($http, (string) $c['username'], (string) $c['password'], (string) $c['account_number']);
             },
