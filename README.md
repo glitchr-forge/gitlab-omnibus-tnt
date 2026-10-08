@@ -35,4 +35,4 @@ TNT account manager; there is no sandbox, TNT flags a test account.
 Built from TNT's published ExpressConnect documentation and tested on recorded answers; not yet
 run against the service.
 
-License: LGPL-3.0-or-later.
+License: MIT since 2026-10-09; earlier versions remain published under LGPL-3.0-or-later.
