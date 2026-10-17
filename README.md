@@ -1,6 +1,6 @@
 # omnibus/tnt
 
-TNT for [glitchr/omnibus](https://github.com/glitchr-studio/omnibus): prices (ExpressConnect
+TNT for [omniscient/omnibus](https://github.com/glitchr-studio/omnibus): prices (ExpressConnect
 Pricing), consignments with their labels (ExpressConnect Shipping) and tracking (ExpressConnect
 Tracking) - the XML services on express.tnt.com, still answered for existing TNT accounts. New
 accounts get FedEx's APIs since TNT joined FedEx: see omnibus/fedex.
@@ -9,7 +9,7 @@ accounts get FedEx's APIs since TNT joined FedEx: see omnibus/fedex.
 $gateway = (new TntGatewayFactory($http))->create($options);   // $http: the application's HTTP client - none given, the factory makes its own; the options below
 ```
 
-No framework needed: the package requires `glitchr/omnibus` and `symfony/http-client`. In a
+No framework needed: the package requires `omniscient/omnibus` and `symfony/http-client`. In a
 Symfony application, the same through the bundle's configuration:
 
 ```yaml
